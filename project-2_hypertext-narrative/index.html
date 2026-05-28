@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Course Design Trainer</title>
+    <link rel="stylesheet" href="./style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Crimson+Pro:ital,wght@0,200..900;1,200..900&family=Stack+Sans+Headline:wght@200..700&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap" rel="stylesheet">
+  </head>
+  <body>
+    <main>
+      <div class="story-box sb1">
+        <h1>How it all started</h1>  
+        <p>A few months ago you've started this new job after more than six months of searching.</p>
+        <p>The search was exhausting and at times soul crushing but now things are finally looking up for you.</p>
+        <p>Except for one small but worrisome thing - your supervisors like they do not jive with you. You are doing your job, turning on things on time and with good quality. However, the supervisors always seem distant and like they instantly lose intetest when you start speaking.</p>
+        <p>You tried several things to break through to them - just in case it can affect you standing in the company. You tried to have some small talk, were double polite and even brough some French pastries from a bougie bakery Downtown.</p>
+        <p>Nothing seems to work. Maybe a message you just received from your boss is about to change the game?</p>
+        <button onClick="showChat()">Check <span style="font-family: 'Lato', sans-serif;">Clack</span></button>
+      </div>
+      <div class="messages">
+        <div class="messages-header">
+          <p>clack</p>
+        </div>
+        <div class="message message-from">
+          <div class="message-img"></div>
+          <div class="message-text-blocks">
+            <span><h4 class="message-name">Boss</h4> <p class="message-time"></p></span>
+            <p class="message-text">Hi there</p>
+          </div>
+        </div>
+        <div class="message message-to">
+          <div class="message-img"></div>
+          <div class="message-text-blocks">
+            <span><h4 class="message-name">You</h4> <p class="message-time"></p></span>
+            <p class="message-text">Oh, hi there!</p>
+            <p class="message-text">How are you doing?</p>
+          </div>
+        </div>
+        <div class="message message-from">
+          <div class="message-img"></div>
+          <div class="message-text-blocks">
+            <span><h4 class="message-name">Boss</h4> <p class="message-time"></p></span>
+            <p class="message-text">No time for all of that. You've been with us for a few months</p>
+          </div>
+        </div>
+        <div class="message message-to">
+          <div class="message-img"></div>
+          <div class="message-text-blocks">
+            <span><h4 class="message-name">You</h4> <p class="message-time"></p></span>
+            <p class="message-text">Yes, that's true!</p>
+          </div>
+        </div>
+        <div class="message message-to">
+          <div class="message-img"></div>
+          <div class="message-text-blocks">
+            <span><h4 class="message-name">You</h4> <p class="message-time"></p></span>
+            <p class="message-text">And I'm glad to be here!</p>
+          </div>
+        </div>
+        <div class="message message-from">
+          <div class="message-img"></div>
+          <div class="message-text-blocks">
+            <span><h4 class="message-name">Boss</h4> <p class="message-time"></p></span>
+            <p class="message-text">Yeah</p>
+            <p class="message-text">I'd like to get you involve into some internal project. You thought, right?</p>
+          </div>
+        </div>
+        <div class="message message-to">
+          <div class="message-img"></div>
+          <div class="message-text-blocks">
+            <span><h4 class="message-name">You</h4> <p class="message-time"></p></span>
+            <p class="message-text">Huh? Thought?</p>
+          </div>
+        </div>
+        <div class="message message-from">
+          <div class="message-img"></div>
+          <div class="message-text-blocks">
+            <span><h4 class="message-name">Boss</h4> <p class="message-time"></p></span>
+            <p class="message-text">Yeah</p>
+            <p class="message-text">Sorry, autocorrect. I mean, taught, like teaching.</p>
+            <p class="message-text">I remember seeing something about that on your CV.</p>
+          </div>
+        </div>
+        <div class="message message-to">
+          <div class="message-img"></div>
+          <div class="message-text-blocks">
+            <span><h4 class="message-name">You</h4> <p class="message-time"></p></span>
+            <p class="message-text">Oh yeah, I did a few year of tutoring in college.</p>
+            <p class="message-text">Nothing too crazy.</p>
+          </div>
+        </div>
+        <div class="message message-from">
+          <div class="message-img"></div>
+          <div class="message-text-blocks">
+            <span><h4 class="message-name">Boss</h4> <p class="message-time"></p></span>
+            <p class="message-text">Yeah</p>
+            <p class="message-text">That sounds good to me!</p>
+            <p class="message-text">A few months before you joined we've launched a small internal onboarding course for managers. However, the 1st launch was low-key a disaster.</p>
+          </div>
+        </div>
+        <div class="message message-to">
+          <div class="message-img"></div>
+          <div class="message-text-blocks">
+            <span><h4 class="message-name">You</h4> <p class="message-time"></p></span>
+            <p class="message-text">Oh no, why</p>
+          </div>
+        </div>
+        <div class="message message-from">
+          <div class="message-img"></div>
+          <div class="message-text-blocks">
+            <span><h4 class="message-name">Boss</h4> <p class="message-time"></p></span>
+            <p class="message-text">Well, it was kinda a mess. We just scrambled to launch something.</p>
+            <p class="message-text">I can share with you the feedback from participants. Would you be able to fix it?</p>
+          </div>
+        </div>
+        <div class="message message-to">
+          <div class="message-img"></div>
+          <div class="message-text-blocks">
+            <span><h4 class="message-name">You</h4> <p class="message-time"></p></span>
+            <p class="message-text">Oh, I don't really know. I'm still getting into the swing on things here.</p>
+            <p class="message-text">I can take a look and get back to you.</p>
+          </div>
+        </div>
+        <div class="message message-from">
+          <div class="message-img"></div>
+          <div class="message-text-blocks">
+            <span><h4 class="message-name">Boss</h4> <p class="message-time"></p></span>
+            <p class="message-text">That would be awesome! I'll email you the materials.</p>
+          </div>
+        </div>
+      </div>
+      <div class="story-box sb2">
+        <p>Ugh, that sounds stressful with this weight of expectations! On the bright side, it might be your chance to impress your bosses and strengthened your position in the company.</p>
+        <div class="lesson-2"><a href='/learn-one.html'>Check your email</a></button>
+      </div>
+    </main>
+    <script>
+      function showChat() {
+        const messages = document.querySelectorAll('.messages');
+        const sb2 = document.querySelectorAll('.sb2');
+
+        console.log(messages);
+        messages[0].style.display = "block";
+        sb2[0].style.display = "block";
+      }
+    </script>
+    <script src=""></script>
+  </body>
+</html>
