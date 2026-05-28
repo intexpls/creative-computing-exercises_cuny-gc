@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Course Design Trainer</title>
+    <link rel="stylesheet" href="styles/actualize-styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet"> 
+  </head>
+  <body>
+    <main>
+      <div class="story-box sb1" onClick="showEmails()">
+        <img class='rise-shake' src="./assets/email-icon.png" width="200">
+      </div>
+      <div class="emails"> <!-- Story insert starts -->
+        <div class="email-header">
+          <p>Aboutlook</p>
+        </div>
+        <div class="emails-content">
+          <div id="email-chain"> <!-- Chain beginning -->
+            <div id="email-chain-topic" class="email-content-box">
+              <p>Course Redesign Request</p>
+            </div>
+            <div class="email initial-email email-content-box">
+              <div class="email-info">
+                <div class="email-img img-boss">Boss</div>
+                <div class="email-from-to">
+                  <h4 class="email-name">I. M. Boss</h4>
+                  <h4 class="email-name">To: You</h4>
+                </div>
+              </div>
+              <div class="email-main-body">
+                <div class="email-attachments">
+                  <div class="attachment"><img src="./assets/pdf-icon.png" width="19"><p>Course Planning</p></div>
+                  <div class="attachment"><img src="./assets/pdf-icon.png" width="19"><p>Course Feedback</p></div>
+                </div>
+                <div class="email-content">
+                  <p class="email-text">Good Afternoon,</p>
+                  <p class="email-text">As per our discussion, I am attaching the info/materials about the course. Please take a look.</p>
+                </div>
+                <div class="email-replies">
+                  <div class="email-reply">
+                    <p class="reply">Hi,<br>I went over the materials. The feedback is quite something!</p>
+                    <div class='reply-icon'><img src="./assets/send-email-icon.png" width="19"></div>
+                  </div>
+                  
+                </div>
+              </div>
+            </div>
+          </div> <!-- Chain end -->
+        </div>
+      </div> <!-- Story insert ends -->
+    </main>
+    <script>
+      const emails = document.querySelectorAll('.emails');
+      const youGotMail = document.querySelectorAll('.sb1');
+
+      function showEmails() {
+        emails[0].style.display = "block";
+        youGotMail[0].classList.add('closed')
+        youGotMail[0].style.display = "none";
+      }
+    </script>
+  </body>
+</html>
