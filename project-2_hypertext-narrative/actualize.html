@@ -61,7 +61,7 @@
                 <p class="email-text email-darkened-text">Hi, I went over the materials. The feedback is quite something!</p>
               </div>
             </div>
-            <div class="email email-reply email-content-box"> <!-- Story reply -->
+            <div class="email email-reply email-active email-content-box"> <!-- Story reply -->
               <div class="email-info">
                 <div class="email-img img-boss">Boss</div>
                 <div class="email-from-to">
@@ -107,7 +107,7 @@
                 <p class="email-text email-darkened-text">Yeah, but I don’t really know where to start/how to fix the issues.</p>
               </div>
             </div>
-            <div class="email email-reply email-content-box"> <!-- Story reply -->
+            <div class="email email-reply email-active email-content-box"> <!-- Story reply -->
               <div class="email-info">
                 <div class="email-img img-boss">Boss</div>
                 <div class="email-from-to">
@@ -122,7 +122,7 @@
                 </div>
               </div>
             </div>
-            <div class="email email-reply email-content-box"> <!-- Story reply -->
+            <div class="email email-reply email-active email-content-box"> <!-- Story reply -->
               <div class="email-info">
                 <div class="email-img img-boss">Boss</div>
                 <div class="email-from-to">
@@ -153,7 +153,7 @@
                 <p class="email-text email-darkened-text">Yes, please! Links will be greatly appreciated.</p>
               </div>
             </div>
-            <div class="email email-reply email-content-box"> <!-- Story reply -->
+            <div class="email email-reply email-active email-content-box"> <!-- Story reply -->
               <div class="email-info">
                 <div class="email-img img-boss">Boss</div>
                 <div class="email-from-to">
@@ -163,7 +163,7 @@
               </div>
               <div class="email-main-body">
                 <div class="email-content">
-                  <p class="email-text">Here you go</p>
+                  <p class="email-text">Here you go:</p>
                   <ul>
                     <li>Constructive alignment, intro (<a href="http://livelovelearn.education/KnowledgeBase/2017/08/18/constructive-alignment/" target="_blank">link</a>)</li>
                     <li>How it transfers from the course to the lesson levels (<a href="https://www.teaching-learning.utas.edu.au/unit-design/constructive-alignment" target="_blank">link</a>)</li>
@@ -179,19 +179,53 @@
         </div>
       </div> <!-- Story insert ends -->
       <div class="story-box sb2">
-        <div class="lesson-2"><a href='./apply_path1.html'>Take a pass</a></div>
-        <div class="lesson-2"><a href='./apply_path2.html'>I finished materials</a></div>
+        <div class="lesson-2 path1"><a href='./apply_path1.html' target="_blank">Take a pass</a></div>
+        <div class="lesson-2 path2"><a href='./apply_path2.html' target="_blank">I finished materials</a></div>
       </div>
     </main>
     <script>
       const emails = document.querySelectorAll('.emails');
       const youGotMail = document.querySelectorAll('.sb1');
+      const buttonsBox = document.querySelectorAll('.sb2');
+      const lessonProgess = document.querySelectorAll('.lesson-2'); 
+      const initialEmail = document.querySelectorAll('.initial-email');
+      const replies = document.querySelectorAll('.email-reply');
+      const replyOptions = document.querySelectorAll('.email-reply-option');
 
       function showEmails() {
         emails[0].style.display = "block";
         youGotMail[0].classList.add('closed')
         youGotMail[0].style.display = "none";
       }
+      
+      replyOptions[0].addEventListener("click", function(event) {
+        initialEmail[0].style.display = 'none';
+        replies[0].style.display = 'block';
+        replies[1].style.display = 'block';
+      });
+
+      replyOptions[1].addEventListener("click", function(event) {
+        replies[1].style.display = 'none';
+        replies[2].style.display = 'block';
+        replies[4].style.display = 'block';
+        buttonsBox[0].style.display = 'block';
+        lessonProgess[0].style.display = 'block';
+      });
+
+      replyOptions[2].addEventListener("click", function(event) {
+        replies[1].style.display = 'none';
+        replies[3].style.display = 'block';
+        replies[5].style.display = 'block';
+      });
+
+      replyOptions[3].addEventListener("click", function(event) {
+        replies[5].style.display = 'none';
+        replies[6].style.display = 'block';
+        replies[7].style.display = 'block';
+        buttonsBox[0].style.display = 'block';
+        lessonProgess[1].style.display = 'block';
+      });
+
     </script>
   </body>
 </html>

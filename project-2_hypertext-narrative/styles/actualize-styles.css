@@ -181,9 +181,22 @@ p {
 
 
 .email-darkened {
-    background: #FAFAFA;
+    background: #f6f6f6;
     color: #616161;
     height: 47px;
+    animation: hideAnimation 2s ease forwards;
+}
+
+@keyframes hideAnimation {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 0.5;
+  }
+  100% {
+    opacity: 1;
+  }
 }
 
 .email-text {
@@ -230,6 +243,29 @@ p {
     margin-left: 57px;
 }
 
+.email-reply {
+    display: none;
+}
+
+.email-active {
+    animation: showAnimation 10s ease forwards;
+}
+
+@keyframes showAnimation {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 0;
+  }
+  75% {
+    opacity: 0.75;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
 .email-reply-option {
     border: 2px solid #0088e3;
     display: flex;
@@ -266,7 +302,7 @@ p {
 /* Lesson progress buttons */
 
 .lesson-2 {
-    display: inline-block;
+    display: none;
     font-family: "Stack Sans Headline", sans-serif;
 	font-size: 13pt;
     padding: 10px 15px;
@@ -299,4 +335,6 @@ p {
 
 .sb2 {
     margin: 0 auto;
+    display: none;
+    animation: showAnimation 20s ease forwards;
 }
